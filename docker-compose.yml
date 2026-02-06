@@ -2,6 +2,10 @@ version: '3.8'
 
 name: payment-gateway
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
   postgres-payment-gateway-db:
     image: docker.io/bitnami/postgresql
     restart: always
