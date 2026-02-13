@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
   postgres-payment-gateway-db:
     image: docker.io/bitnami/postgresql
     restart: always
