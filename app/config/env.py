@@ -21,7 +21,7 @@ class Environments(BaseSettings):
     DB_HOST: str = Field(..., validation_alias="DB_HOST", description="Database Host")
     DB_PASSWORD: str = Field(..., validation_alias="DB_PASSWORD", description="Database Password")
     DB_NAME: str = Field(..., validation_alias="DB_NAME", description="Database name")
-    DB_DIALECT: str = Field(default="mysql", validation_alias="DB_DIALECT", description="Database Dialect")
+    DB_DIALECT: str = Field(default="postgresql+psycopg2", validation_alias="DB_DIALECT", description="Database Dialect")
     DB_PORT: int = Field(default=5432, validation_alias="DB_PORT", description="Database Port")
 
 env = Environments()

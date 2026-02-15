@@ -7,7 +7,7 @@ class Logger:
         self.__ctx = context
 
         logging.basicConfig(
-            format="{levelaname} | {asctime}: {message}",
+            format="{levelname} | {asctime}: {message}",
             datefmt="%Y-%m-%d %H:%M",
             style="{"
         )
@@ -28,4 +28,4 @@ class Logger:
     def debug(self, message):
         if env.environment == Environment.DEV or env.environment == Environment.LOCAL:
             log_message = f"[{self.__ctx}]: {message}"
-            self.__logger.error(log_message)
+            self.__logger.info(log_message)
