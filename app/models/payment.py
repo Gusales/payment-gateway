@@ -1,12 +1,11 @@
 import uuid
 
 from sqlalchemy import Column, String, Numeric, Text, DateTime, Enum
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
 
-from app.domains.enums.reference_type import ReferenceType
-from app.domains.enums.payment_method_type import PaymentMethodType
-from app.domains.enums.payment_status import PaymentStatus
+from app.domain.enums.reference_type import ReferenceType
+from app.domain.enums.payment_method_type import PaymentMethodType
+from app.domain.enums.payment_status import PaymentStatus
 
 from app.config.database import Base
 
