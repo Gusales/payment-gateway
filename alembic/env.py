@@ -8,6 +8,7 @@ from alembic import context
 from app.config.database import Base, Database
 
 from app.models.payment import Payment
+from app.models.provider_transactions import ProviderTransactions
 
 print("ALEMBIC TABLES:", list(Base.metadata.tables.keys()))
 
