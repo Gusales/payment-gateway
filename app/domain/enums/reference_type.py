@@ -1,11 +1,11 @@
 from enum import Enum
 
 class ReferenceType(str, Enum):
-    ORDER = 'order'
-    SUBSCRIPTION = 'subscription'
-    INVOICE = 'invoice' 
-    DONATION = 'donation' 
-    TOPUP = 'topup' 
-    BOOKING = 'booking'
-    FEE = 'fee' 
-    ADJUSTMENT = 'adjustment'
+    ORDER = 'ORDER'
+    SUBSCRIPTION = 'SUBSCRIPTION'
+    INVOICE = 'INVOICE' 
+    DONATION = 'DONATION' 
+    TOPUP = 'TOPUP' 
+    BOOKING = 'BOOKING'
+    FEE = 'FEE' 
+    ADJUSTMENT = 'ADJUSTMENT'

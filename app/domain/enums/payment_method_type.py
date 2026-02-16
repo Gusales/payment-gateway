@@ -1,6 +1,6 @@
 from enum import Enum
 
 class PaymentMethodType(str, Enum):
-    PIX = 'pix'
-    BANK_SLIP = 'bank slip'
-    CARD = 'card'
+    PIX = 'PIX'
+    BANK_SLIP = 'BANK_SLIP'
+    CARD = 'CARD'
