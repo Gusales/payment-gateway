@@ -1,14 +1,13 @@
 {
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Python Debugger: FastAPI",
             "type": "debugpy",
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "main:app",
+                "app.main:app",
                 "--reload",
                 "--host",
                 "0.0.0.0",
@@ -16,7 +15,14 @@
                 "8080"
             ],
             "jinja": true,
-            "cwd": "${workspaceFolder}/app",
-        }
+        },
+        {
+            "name": "Python Debugger: Test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env.test"
+        },
     ]
 }

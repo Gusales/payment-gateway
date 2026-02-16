@@ -6,6 +6,7 @@ class Environment(str, Enum):
     LOCAL    = 'local'
     DEV      = 'dev'
     PROD     = 'prod'
+    TEST     = 'test'
     TEST_E2E = 'test_e2e'
 
 class Environments(BaseSettings):

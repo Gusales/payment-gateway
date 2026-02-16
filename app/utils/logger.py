@@ -13,19 +13,21 @@ class Logger:
         )
 
         self.__logger = logging.getLogger(__name__)
-        self.__logger.setLevel(logging.INFO)
 
     def log(self, message):
+        self.__logger.setLevel(logging.INFO)
         log_message = f"[{self.__ctx}]: {message}"
 
         self.__logger.info(log_message)
 
     def error(self, message):
-        log_message = f"[{self.__ctx}]: {message}"
+        self.__logger.setLevel(logging.ERROR)
+        log_message = f"Error at: [{self.__ctx}]: {message}"
 
         self.__logger.error(log_message)
 
     def debug(self, message):
-        if env.environment == Environment.DEV or env.environment == Environment.LOCAL:
+        if env.environment == Environment.DEV or env.environment == Environment.LOCAL or env.environment == Environment.TEST or env.environment == Environment.TEST_E2E:
+            self.__logger.setLevel(logging.DEBUG)
             log_message = f"[{self.__ctx}]: {message}"
-            self.__logger.info(log_message)
+            self.__logger.debug(log_message)
