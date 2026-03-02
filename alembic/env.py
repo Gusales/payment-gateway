@@ -9,6 +9,10 @@ from app.config.database import Base, Database
 
 from app.models.payment import Payment
 from app.models.provider_transactions import ProviderTransactions
+from app.models.payment_method_pix import PaymentMethodPix
+from app.models.payment_method_card import PaymentMethodCard
+from app.models.payment_method_boleto import PaymentMethodBoleto
+from app.models.webhook_events import WebhookEvent
 
 print("ALEMBIC TABLES:", list(Base.metadata.tables.keys()))
 
