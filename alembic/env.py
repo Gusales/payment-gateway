@@ -7,12 +7,12 @@ from alembic import context
 
 from app.config.database import Base, Database
 
-from app.models.payment import Payment
-from app.models.provider_transactions import ProviderTransactions
-from app.models.payment_method_pix import PaymentMethodPix
-from app.models.payment_method_card import PaymentMethodCard
-from app.models.payment_method_boleto import PaymentMethodBoleto
-from app.models.webhook_events import WebhookEvent
+from app.domain.models.payment import Payment
+from app.domain.models.provider_transactions import ProviderTransactions
+from app.domain.models.payment_method_pix import PaymentMethodPix
+from app.domain.models.payment_method_card import PaymentMethodCard
+from app.domain.models.payment_method_boleto import PaymentMethodBoleto
+from app.domain.models.webhook_events import WebhookEvent
 
 print("ALEMBIC TABLES:", list(Base.metadata.tables.keys()))
 
